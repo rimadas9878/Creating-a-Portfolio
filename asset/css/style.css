@@ -1,88 +1,320 @@
-*{
+* {
     font-family: 'Courier New', Courier, monospace;
-}
-:root{
---headerbackground: linear-gradient(
-    rgba(243, 243, 234, 1),
-    rgb(124, 62, 102)
-);
+
 }
 
-.header{
+:root {
+    --headerbackground: linear-gradient(rgba(243, 243, 234, 1),
+            rgb(124, 62, 102));
+}
+
+body {
     width: 100%;
-    height: 900px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header {
+    width: 100%;
+    height: 800px;
     background: var(--headerbackground);
-    
+    display: flex;
+    flex-wrap: wrap;
 }
-.header h1{
+
+.header h1 {
     text-align: center;
-    padding: 15%;
+    padding-left: 32%;
+    padding-top: 15%;
     font-size: 400%;
-    color:rgb(91, 47, 47);
+    color: rgb(91, 47, 47);
+    display: flex;
+    flex-wrap: wrap;
 }
-button{
-    position:absolute;
-    left:37%;
-    top: 50%;
-    font-size: 36px;
-    border-radius: 10px;
-    background-color: rgb(91, 47, 47);
-    border: 1px;
+
+.avatar {
+    padding-top: 7%;
+    width: 15%;
+    height: 15%;
 }
-.navigation{
+
+.navigation {
     background-color: #907e7a;
     width: 100%;
-    padding: 10px;  
+    padding: 10px;
     display: flex;
     flex-direction: row;
+    background-color: goldenrod;
 }
-.navigation a{
+
+.navigation a {
     margin: 10px 10px;
-    padding: 10px 10px;
+    padding: 10px 20px;
     color: rgb(91, 47, 47);
-    font-size:large;
+    font-size: 20px;
+    font-weight: bolder;
     text-align: center;
+    border-radius: 20px;
+
 
 }
-.personaldetails{
+.navigation:hover a:hover{
+    background-color: darkgoldenrod;
+}
+
+
+.personaldetails {
+    background-color: #F2EBE9;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.personaldetails h2 {
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+    color: rgb(91, 47, 47);
+}
+
+
+.softskills {
+    display: flex;
+    flex-direction: row;
+    justify-items: flex-start;
+    flex-wrap: wrap;
+    margin: 20px 20px;
+
+}
+
+.hardskills {
+    display: flex;
+    justify-items: flex-start;
+    flex-direction: row;
+    margin: 20px 2px;
+}
+
+.softskills h3 {
+    margin: 20px 10px;
+    padding: 30px 10px;
+    font-size: 30px;
+    color: rgb(91, 47, 47);
+}
+
+.hardskills h3 {
+    margin: 20px 10px;
+    padding: 30px 10px;
+    font-size: 30px;
+    color: rgb(91, 47, 47);
+}
+
+.softskills .thinker {
     background-color: #F2EBE9;
 }
-.softskills h2{
-    text-align: center;
-    font-size: 60px;
-    color:rgb(91, 47, 47);
-}
-.softskills h3{
-    margin: 10px 30px;
-    font-size: 30px;
-    color:rgb(91, 47, 47);
-}
 
-.thinker{
+.thinker {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-left: 20px;
+    flex-wrap: wrap;
+    margin-left: 10px;
+    margin-right: 5px;
 
 }
-.thinker h4{
+
+.thinker h4 {
     display: flex;
     justify-content: center;
     align-items: center;
     background: var(--headerbackground);
     border-radius: 100%;
     text-align: center;
-    font-size: 25px;
-    height: 130px;
-    width: 130px;
-    color:indigo;
-}
-.thinker p{
-    text-align: center;
-    padding: 30px 20px;
     font-size: 20px;
-    width: 30%;
-    float: right;
+    height: 120px;
+    width: 130px;
+    color: indigo;
 }
 
+.thinker p {
+display: none;
+    
+}
+
+.thinker:hover p{
+    display: contents;
+}
+
+
+.codelanguages {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.codelanguages h4 {
+    padding: 40px;
+    margin: 20px;
+    font-size: 20px;
+    text-decoration:solid;
+    background: var(--headerbackground);
+    color: indigo;
+}
+
+.Workdetails {
+    background-color: #A5BECC;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Work h2 {
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+    color: rgb(91, 47, 47);
+}
+
+.Horiseon{
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+    margin: 10px 50px;
+    border: 5px solid black;
+}
+.Horiseon h5{
+    color: indigo;
+    font-size: 20px;
+}
+.Horiseon img{
+    width: 200px; 
+    height: 200px;
+    margin-top: 30px 10px;
+    padding: 40px 10px;
+}
+.Horiseon p{
+    padding: 0px 10px;
+    margin: 20px;
+    color:brown;
+}
+.Horiseon h4{
+    color:crimson;
+}
+
+.Dog-The-paws{
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+    margin: 10px 50px;
+    border: 5px solid black;
+}
+.Dog-The-paws h5{
+    color: indigo;
+    font-size: 20px;
+}
+.Dog-The-paws img{
+    width: 200px; 
+    height: 200px;
+    margin-top: 30px 10px;
+    padding: 40px 10px;
+}
+.Dog-The-paws p{
+    padding: 0px 10px;
+    margin: 20px;
+    color:brown;
+}
+.Dog-The-paws h4{
+    color:crimson;
+}
+.CSS-Snippet{
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+    margin: 10px 50px;
+    border: 5px solid black;
+}
+.CSS-Snippet h5{
+    color: indigo;
+    font-size: 20px;
+}
+.CSS-Snippet img{
+    width: 200px; 
+    height: 200px;
+    margin-top: 30px 10px;
+    padding: 40px 10px;
+}
+.CSS-Snippet p{
+    padding: 0px 10px;
+    margin: 20px;
+    color:brown;
+}
+.CSS-Snippet h4{
+    color:crimson;
+}
+.ContactMe{
+    background-color: #243A73;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.Contacttitle h2{
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+    color: rgb(91, 47, 47);
+}
+.Contactdetails{
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+}
+.Contactdetails h3{
+    margin-top: 30px;
+    font-size: 30px;
+    padding-top: 30px;
+    margin-left: 25%;
+}
+.Contactdetails img{
+    width: 100px; 
+    height: 100px;
+    padding: 30px 30px;
+    margin-left: 60px;
+    
+}
+.Questions{
+    background-color: #54555a;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.Questionstitle h3{
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+    color: rgb(91, 47, 47);
+}
+.form{
+    display: flex;
+    flex-direction: row;
+}
+.form label{
+
+    padding: 30px 30px;
+    margin-left: 60px;
+    
+}
+footer{
+    margin: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+@media (max-width:992px) {
+    body {
+        width: 100%;
+    }
+}
+
+@media (max-width:768px) {
+    body {
+        width: 100%;
+    }
+
+}
