@@ -4,9 +4,18 @@
 }
 
 :root {
-    --headerbackground: linear-gradient(rgba(243, 243, 234, 1),
-            rgb(124, 62, 102));
+    --softskill: darkcyan;
+
+    --headerbackground: linear-gradient(rgb(159, 192, 136, 1),
+            rgb(36, 50, 26));
+
+    --workbackground: #CC704B;
+
+    --titlecolors: brown;
+
+    --worktitle: azure;
 }
+
 
 body {
     width: 100%;
@@ -33,9 +42,14 @@ body {
 }
 
 .avatar {
-    padding-top: 7%;
+    padding-top: 6%;
+    padding-left: 5%;
     width: 15%;
     height: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    z-index: 5;
 }
 
 .navigation {
@@ -45,26 +59,26 @@ body {
     display: flex;
     flex-direction: row;
     background-color: goldenrod;
+    text-align: center;
 }
 
 .navigation a {
-    margin: 10px 10px;
-    padding: 10px 20px;
-    color: rgb(91, 47, 47);
-    font-size: 20px;
-    font-weight: bolder;
     text-align: center;
+    margin: 10px 30px;
+    padding: 10px 30px;
+    color: var(--titlecolors);
+    font-size: 25px;
+    font-weight: bolder;
     border-radius: 20px;
-
-
 }
-.navigation:hover a:hover{
+
+.navigation:hover a:hover {
     background-color: darkgoldenrod;
 }
 
 
 .personaldetails {
-    background-color: #F2EBE9;
+    background-color: rgb(232, 192, 125);
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -72,44 +86,37 @@ body {
 
 .personaldetails h2 {
     text-align: center;
-    font-size: 30px;
+    font-size: 40px;
     padding: 10px;
-    color: rgb(91, 47, 47);
+    color: var(--titlecolors);
+    font-weight: bolder;
 }
-
 
 .softskills {
     display: flex;
     flex-direction: row;
     justify-items: flex-start;
     flex-wrap: wrap;
-    margin: 20px 20px;
+    margin: 20px 28%;
 
+}
+
+.personaldetails h3 {
+    text-align: center;
+    font-size: 30px;
+    color: rgb(91, 47, 47);
+    text-decoration: underline;
 }
 
 .hardskills {
     display: flex;
     justify-items: flex-start;
     flex-direction: row;
-    margin: 20px 2px;
-}
-
-.softskills h3 {
-    margin: 20px 10px;
-    padding: 30px 10px;
-    font-size: 30px;
-    color: rgb(91, 47, 47);
-}
-
-.hardskills h3 {
-    margin: 20px 10px;
-    padding: 30px 10px;
-    font-size: 30px;
-    color: rgb(91, 47, 47);
+    margin: 20px 10%;
 }
 
 .softskills .thinker {
-    background-color: #F2EBE9;
+    background-color: rgb(232, 192, 125);
 }
 
 .thinker {
@@ -125,42 +132,74 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--headerbackground);
+    background: var(--softskill);
     border-radius: 100%;
     text-align: center;
     font-size: 20px;
     height: 120px;
     width: 130px;
-    color: indigo;
+    color: brown;
 }
 
-.thinker p {
-display: none;
-    
+.softkillexplain {
+    text-align: center;
+    font-size: 20px;
+    line-height: 2;
+    margin-bottom: 5%;
 }
 
-.thinker:hover p{
-    display: contents;
+.skilltitle {
+    color: red;
+    font-size: 20px;
 }
 
+.hardskills h3 {
+    margin: 40px 30px;
+    padding: 40px 30px;
+    font-size: 30px;
+    color: rgb(91, 47, 47);
+}
 
 .codelanguages {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-left: 10px;
+    margin-right: 5px;
 }
 
-.codelanguages h4 {
-    padding: 40px;
-    margin: 20px;
+.codelanguages h4,
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--softskill);
+    border-radius: 100%;
+    text-align: center;
     font-size: 20px;
-    text-decoration:solid;
-    background: var(--headerbackground);
-    color: indigo;
+    height: 120px;
+    width: 130px;
+    color: brown;
+    margin: 10px;
+    border: none;
+
 }
+
+button .afterhover {
+    display: none;
+}
+
+button:hover .beforehover {
+    display: none;
+}
+
+button:hover .afterhover {
+    display: inline;
+}
+
 
 .Workdetails {
-    background-color: #A5BECC;
+    background-color: var(--workbackground);
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -168,153 +207,208 @@ display: none;
 
 .Work h2 {
     text-align: center;
-    font-size: 30px;
+    font-size: 40px;
     padding: 10px;
-    color: rgb(91, 47, 47);
+    color: var(--titlecolors);
+    font-weight: bolder;
 }
 
-.Horiseon{
+.Horiseon {
     font-size: 20px;
     text-align: center;
     padding: 20px;
     margin: 10px 50px;
     border: 5px solid black;
-}
-.Horiseon h5{
-    color: indigo;
-    font-size: 20px;
-}
-.Horiseon img{
-    width: 200px; 
-    height: 200px;
-    margin-top: 30px 10px;
-    padding: 40px 10px;
-}
-.Horiseon p{
-    padding: 0px 10px;
-    margin: 20px;
-    color:brown;
-}
-.Horiseon h4{
-    color:crimson;
 }
 
-.Dog-The-paws{
+.Horiseon h4 {
+    color: var(--worktitle);
+    font-size: 30px;
+    font-weight: bolder;
+
+}
+
+.Horiseon img {
+    width: 200px;
+    height: 200px;
+    margin-top: 30px 10px;
+    padding: 40px 10px;
+}
+
+.imghover:hover {
+    transform: scale(2);
+}
+
+.Horiseon p {
+    padding: 0px 50px;
+    margin: 20px;
+    color: var(--worktitle)
+}
+
+.Horiseon a {
+    color: darkgreen;
+}
+
+.Dog-The-paws {
     font-size: 20px;
     text-align: center;
     padding: 20px;
     margin: 10px 50px;
     border: 5px solid black;
 }
-.Dog-The-paws h5{
-    color: indigo;
+
+.Dog-The-paws h4 {
+    color: var(--worktitle);
     font-size: 20px;
 }
-.Dog-The-paws img{
-    width: 200px; 
+
+.Dog-The-paws img {
+    width: 200px;
     height: 200px;
     margin-top: 30px 10px;
     padding: 40px 10px;
 }
-.Dog-The-paws p{
+
+.Dog-The-paws p {
     padding: 0px 10px;
     margin: 20px;
-    color:brown;
+    color: var(--worktitle)
 }
-.Dog-The-paws h4{
-    color:crimson;
+
+.Dog-The-paws a {
+    color: darkgreen;
 }
-.CSS-Snippet{
+
+.CSS-Snippet {
     font-size: 20px;
     text-align: center;
     padding: 20px;
     margin: 10px 50px;
     border: 5px solid black;
 }
-.CSS-Snippet h5{
-    color: indigo;
-    font-size: 20px;
+
+.CSS-Snippet h4 {
+    color: var(--worktitle);
+    font-size: 30px;
 }
-.CSS-Snippet img{
-    width: 200px; 
+
+.CSS-Snippet img {
+    width: 200px;
     height: 200px;
     margin-top: 30px 10px;
     padding: 40px 10px;
 }
-.CSS-Snippet p{
+
+.CSS-Snippet p {
     padding: 0px 10px;
     margin: 20px;
-    color:brown;
+    color: var(--worktitle)
 }
-.CSS-Snippet h4{
-    color:crimson;
+
+.CSS-Snippet a {
+    color: darkgreen;
 }
-.ContactMe{
-    background-color: #243A73;
+
+a:hover {
+    color: yellow;
+}
+
+p::first-letter {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: brown;
+}
+
+.ContactMe {
+    background-color: rgb(97, 65, 36);
     width: 100%;
     display: flex;
     flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
 }
-.Contacttitle h2{
+
+.Contacttitle h2 {
     text-align: center;
-    font-size: 30px;
+    font-size: 40px;
     padding: 10px;
-    color: rgb(91, 47, 47);
+    color: black;
+    font-weight: bolder;
+
+
 }
-.Contactdetails{
+
+.Contactdetails {
     display: flex;
     flex-direction: row;
     padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
 }
-.Contactdetails h3{
+
+.Contactdetails h3 {
     margin-top: 30px;
     font-size: 30px;
     padding-top: 30px;
     margin-left: 25%;
+    display: flex;
+    flex-wrap: wrap;
 }
-.Contactdetails img{
-    width: 100px; 
+
+.Contactdetails img {
+    width: 100px;
     height: 100px;
     padding: 30px 30px;
     margin-left: 60px;
-    
-}
-.Questions{
-    background-color: #54555a;
-    width: 100%;
     display: flex;
-    flex-direction: column;
-}
-.Questionstitle h3{
-    text-align: center;
-    font-size: 30px;
-    padding: 10px;
-    color: rgb(91, 47, 47);
-}
-.form{
-    display: flex;
-    flex-direction: row;
-}
-.form label{
+    flex-wrap: wrap;
 
-    padding: 30px 30px;
-    margin-left: 60px;
-    
 }
-footer{
+
+footer {
     margin: 20px;
     font-size: 30px;
     text-align: center;
 }
+
 @media (max-width:992px) {
     body {
         width: 100%;
+    }
+    .avatar {
+        position: static;
+    }
+    header h1{
+        font-size: 200% !important;
+        margin-top: 30%;
     }
 }
 
 @media (max-width:768px) {
     body {
         width: 100%;
+    }
+
+    .avatar {
+        position: static;
+        margin-top: 30%;
+    }
+    header h1{
+        font-size: 200% !important;
+        margin-top: 30%;
+    }
+}
+@media (max-width:481px) {
+    body {
+        width: 100%;
+    }
+   .avatar {
+        position: static;
+    }
+
+    header h1{
+        font-size: 100% !important;
+        margin-top: 30%;
     }
 
 }
