@@ -14,6 +14,7 @@
     --titlecolors: brown;
 
     --worktitle: azure;
+
 }
 
 
@@ -37,8 +38,7 @@ body {
     padding-top: 15%;
     font-size: 400%;
     color: rgb(91, 47, 47);
-    display: flex;
-    flex-wrap: wrap;
+
 }
 
 .avatar {
@@ -46,21 +46,23 @@ body {
     padding-left: 5%;
     width: 15%;
     height: 15%;
-    display: flex;
-    flex-wrap: wrap;
     position: absolute;
     z-index: 5;
+    display: flex;
+    flex-wrap: wrap;
 }
+
 
 .navigation {
     background-color: #907e7a;
     width: 100%;
     padding: 10px;
+    background-color: goldenrod;
     display: flex;
     flex-direction: row;
-    background-color: goldenrod;
-    text-align: center;
+
 }
+
 
 .navigation a {
     text-align: center;
@@ -72,6 +74,7 @@ body {
     border-radius: 20px;
 }
 
+/*This will changes the style of the link when hovered*/
 .navigation:hover a:hover {
     background-color: darkgoldenrod;
 }
@@ -84,6 +87,7 @@ body {
     flex-direction: column;
 }
 
+
 .personaldetails h2 {
     text-align: center;
     font-size: 40px;
@@ -91,6 +95,7 @@ body {
     color: var(--titlecolors);
     font-weight: bolder;
 }
+
 
 .softskills {
     display: flex;
@@ -108,18 +113,8 @@ body {
     text-decoration: underline;
 }
 
-.hardskills {
-    display: flex;
-    justify-items: flex-start;
-    flex-direction: row;
-    margin: 20px 10%;
-}
-
-.softskills .thinker {
-    background-color: rgb(232, 192, 125);
-}
-
 .thinker {
+    background-color: rgb(232, 192, 125);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -127,6 +122,7 @@ body {
     margin-right: 5px;
 
 }
+
 
 .thinker h4 {
     display: flex;
@@ -141,6 +137,7 @@ body {
     color: brown;
 }
 
+/*Line height helps to add space between the lines */
 .softkillexplain {
     text-align: center;
     font-size: 20px;
@@ -151,6 +148,11 @@ body {
 .skilltitle {
     color: red;
     font-size: 20px;
+}
+.hardskills {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 10%;
 }
 
 .hardskills h3 {
@@ -168,6 +170,8 @@ body {
     margin-right: 5px;
 }
 
+/*border radius 100 helps to get the round space*/
+/*Took help from google to get the codes right*/
 .codelanguages h4,
 button {
     display: flex;
@@ -182,9 +186,11 @@ button {
     color: brown;
     margin: 10px;
     border: none;
+    font-weight: bold;
 
 }
 
+/*This code helps to display the % value when hovered over the hardskill labels*/
 button .afterhover {
     display: none;
 }
@@ -219,13 +225,15 @@ button:hover .afterhover {
     padding: 20px;
     margin: 10px 50px;
     border: 5px solid black;
-}
+    
 
+}
+/*Added a shadow to the text Horiseon*/
 .Horiseon h4 {
     color: var(--worktitle);
     font-size: 30px;
     font-weight: bolder;
-
+    text-shadow: 6px 6px 6px black;
 }
 
 .Horiseon img {
@@ -257,9 +265,12 @@ button:hover .afterhover {
     border: 5px solid black;
 }
 
+/*Added shadow to the text Dog-The paws*/
 .Dog-The-paws h4 {
     color: var(--worktitle);
-    font-size: 20px;
+    font-size: 30px;
+    font-weight: bolder;
+    text-shadow: 6px 6px 6px black;
 }
 
 .Dog-The-paws img {
@@ -287,9 +298,12 @@ button:hover .afterhover {
     border: 5px solid black;
 }
 
+/*Added shadow to the text CSS Snippet*/
 .CSS-Snippet h4 {
     color: var(--worktitle);
     font-size: 30px;
+    font-weight: bolder;
+    text-shadow: 6px 6px 6px black;
 }
 
 .CSS-Snippet img {
@@ -349,6 +363,7 @@ p::first-letter {
 .Contactdetails h3 {
     margin-top: 30px;
     font-size: 30px;
+    color:azure;
     padding-top: 30px;
     margin-left: 25%;
     display: flex;
@@ -370,6 +385,7 @@ footer {
     font-size: 30px;
     text-align: center;
 }
+
 
 @media (max-width:992px) {
     body {
